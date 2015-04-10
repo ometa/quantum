@@ -1,19 +1,18 @@
 #!/bin/bash
 #
 # This script sets up symlinks inside the user's $HOME directory.  It provides overwrite protection.
-#
 
 basename=$(basename $0)
 
 # sanity checking
 if [[ ! -f .git/config ]]; then
-    echo "Run $basename from the root of the quantum repo"
-    exit 1
+  echo "Run $basename from the root of the quantum repo"
+  exit 1
 fi
 
 if [[ $1 == "--force" ]]; then
-	force=true
-	shift
+  force=true
+  shift
 fi
 
 # what files to skip
@@ -70,4 +69,3 @@ popd 2>&1 >> /dev/null
 # activate git submodules
 git submodule init
 git submodule update
-
