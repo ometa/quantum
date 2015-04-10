@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [[ ! $QUANTUM_HOME ]]; then
+  echo "QUANTUM_HOME environment variable must be defined"
+  exit 1
+fi
+
+pushd $QUANTUM_HOME > /dev/null
+
+git add .
+git st
+
+popd > /dev/null

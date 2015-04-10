@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [[ ! $QUANTUM_HOME ]]; then
+  echo "QUANTUM_HOME environment variable must be defined"
+  exit 1
+fi
+
+pushd $QUANTUM_HOME > /dev/null
+
+git ci -am'commit via quantum-update'
+git pull --rebase origin master
+git push origin master
+
+source $HOME/.bashrc
+
+popd > /dev/null

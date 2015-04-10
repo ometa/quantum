@@ -1,0 +1,2 @@
+setup script does not correctly handle the backup and symlink of a directory that's already present on the filesystem.
+

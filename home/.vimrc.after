@@ -1,0 +1,55 @@
+" extra vim environment setup
+
+""""""""""""""
+" MacVim
+""""""""""""""
+if has("gui_macvim")
+  "colorscheme wombat
+  "colorscheme lettuce
+  "colorscheme neverness
+  "colorscheme peaksea
+  "colorscheme wombat
+  "colorscheme brookstream
+  "colorscheme habilight
+
+  "set transparency=7
+  "colorscheme darkbone
+
+  "set guifont=Menlo\ Regular:h13
+  set guifont=Consolas:h14
+
+  set background=dark
+  set transparency=2
+  colorscheme solarized
+
+  " automatic reload of files on change
+  set autoread
+endif
+
+""""""""""""""
+" B A S I C
+""""""""""""""
+set vb           " disabl audible completion bells
+set wildmenu     " fancy command completion menu ( e.g.  :color <tab> )
+set showcmd      " shows incomplete command to the left of the ruler
+
+set nosplitright  " open new window with vsp on the RIGHT by default, not left
+
+""""""""""""""""""
+" S Y N T A X
+""""""""""""""""""
+au BufRead,BufNewFile *.go setf go
+au BufNewFile,BufRead *.vcl setf vcl
+
+""""""""""""""""""
+" M A P P I N G
+""""""""""""""""""
+" :nmap <C-N><C-N> :set invnumber<CR>  " toggle line number
+"
+"
+""""""""""""""""""
+" P L U G I N
+""""""""""""""""""
+" let g:ctrlp_working_path_mode = 0  " CtrlP current working dir
+" let g:buffergator_viewport_split_policy= "T"  " Top position
+" let g:buffergator_split_size = 6
